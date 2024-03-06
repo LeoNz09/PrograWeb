@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario 1</title>
+	<meta charset="utf-8">
+</head>
+<body style="background-color: #51FFFA;">
+
+	<header>
+		<h1 align="center" style="color: darkblue;">Venta en línea</h1>
+	</header>
+
+	<form method="post" action="" enctype="text/plain">
+
+		<fieldset style="background-color: #B7FF91;">
+			<legend style="color: #000CFE;"><b>Información del usuario</b></legend>
+			<label for="usuario">NOMBRE(S):&nbsp;&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Nombre o nombres" title="Nombre del usuario">
+
+			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO PATERNO:&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Apellido Paterno" title="Nombre del usuario">
+
+			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO MATERNO:&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Apellido Materno" title="Nombre del usuario">
+			<br>
+			<br>
+
+			<label for="usuario">NOMBRE DE USUARIO:&nbsp;&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Nombre de usuario" title="Nombre del usuario" required>
+
+			<label for="pass">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTRASEÑA:&nbsp;</label>
+			<input type="password" name="pass" id="pass" maxlength="8" size="15" placeholder="Contraseña" title="Contraseña" required>
+			<br>
+			<br>
+
+			<label for="Fechan">FECHA DE NACIMIENTO:&nbsp;</label>
+			<input type="date" name="Fechan" id="Fechan"> <br/>
+
+		</fieldset>
+
+		<br>
+
+		<fieldset style="background-color: #B7FF91;">
+			<legend style="color: #000CFE;"><b>Datos de facturación</b></legend>
+
+			<label for="semestre">Selecciona tu País</label><br>
+			<select name="semestre" id="semestre" multiple size="6" : required>
+				<optgroup label="País">
+				    <option>Canadá</option>
+				    <option>Estados Unidos</option>
+				    <option>México</option>
+				    <option>Brasil</option>
+				    <option>Argentina</option>
+				</optgroup>
+				<optgroup label="Otro">
+					<option>Otro país</option>
+				</optgroup>
+			</select> <br><br>
+
+			<label for="ciudad">Selecciona tu ciudad (Si no se encuentra en la lista de opciones, por favor escríbela)</label><br>
+			<input type="text" name="ciudad" id="ciudad" list="ciudades">
+			<datalist id="ciudades">
+				<option>Toronto</option>
+				<option>Ontario</option>
+				<option>Vancouver</option>
+				<option>Columbia Británica</option>
+				<option>Montreal</option>
+				<option>Quebec</option>
+				<option>Washington</option>
+				<option>New York</option>
+				<option>Los Ángeles</option>
+				<option>Chicago</option>
+				<option>Houston</option>
+				<option>Ciudad de México</option>
+				<option>Monterrey</option>
+				<option>Guadalajara</option>
+				<option>Tijuana</option>
+				<option>Aguascalientes</option>
+				<option>San Luis Potosí</option>
+				<option>Brasilia</option>
+				<option>Rio de Janeiro</option>
+				<option>São Paulo</option>
+				<option>Salvador de Bahía</option>
+				<option>Belo Horizonte</option>
+				<option>Buenos Aires</option>
+				<option>Córdoba</option>
+				<option>Rosario</option>
+				<option>La Plata</option>
+				<option>San Miguel de Tucumán</option>
+				<option>Mar del Plata</option>
+			</datalist> <br/>
+
+			<p>Domicilio:</p>
+
+			<label for="usuario">CALLE:&nbsp;&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Calle" title="Nombre del usuario">
+
+			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NÚMERO DE CASA:&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Número de casa" title="Nombre del usuario">
+
+			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLONIA:&nbsp;</label>
+			<input type="text" name="usuario" maxlength="25" placeholder="Colonia" title="Nombre del usuario">
+
+			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÓDIGO POSTAL:&nbsp;</label>
+			<input type="text" name="usuario" maxlength="7" placeholder="C.P." title="Nombre del usuario">
+			<br><br>
+			
+			<label for="correo">E-mail:</label>
+			<input type="email" name="correo" id="correo" placeholder="Correo electrónico" required>
+
+			<label for="pass">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
+			<input type="password" name="pass" id="pass" maxlength="8" size="15" placeholder="Contraseña" title="Contraseña" required>
+			<br><br>
+
+			<label for="califica">¿Cómo evaluas el sitio web?</label> <br>
+			<input type="range" name="califica" id="califica" min="1" max="10" value="0">
+			<br><br>
+
+			<input type="submit" name="envio" id="envio" value="Enviar Formulario"> &nbsp;
+
+			<input type="reset" name="borrar" id="borrar" value="Borrar Formulario">
+
+		</fieldset>
+		
+	</form>
+
+</body>
+</html>
