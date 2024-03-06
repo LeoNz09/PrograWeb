@@ -15,13 +15,13 @@
 		<fieldset style="background-color: #B7FF91;">
 			<legend style="color: #000CFE;"><b>Información del usuario</b></legend>
 			<label for="usuario">NOMBRE(S):&nbsp;&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Nombre o nombres" title="Nombre del usuario">
+			<input type="text" name="usuario" id="usuario" maxlength="25" placeholder="Nombre o nombres" title="Nombre del usuario" required>
 
-			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO PATERNO:&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Apellido Paterno" title="Nombre del usuario">
+			<label for="apellidopaterno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO PATERNO:&nbsp;</label>
+			<input type="text" name="apellidopaterno" id="apellidopaterno" maxlength="25" placeholder="Apellido Paterno" title="Primer apellido del usuario">
 
-			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO MATERNO:&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Apellido Materno" title="Nombre del usuario">
+			<label for="apellidomaterno">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APELLIDO MATERNO:&nbsp;</label>
+			<input type="text" name="apellidomaterno" id="apellidomaterno" maxlength="25" placeholder="Apellido Materno" title="Segundo apellido del usuario">
 			<br>
 			<br>
 
@@ -43,8 +43,8 @@
 		<fieldset style="background-color: #B7FF91;">
 			<legend style="color: #000CFE;"><b>Datos de facturación</b></legend>
 
-			<label for="semestre">Selecciona tu País</label><br>
-			<select name="semestre" id="semestre" multiple size="6" : required>
+			<label for="pais">Selecciona tu País</label><br>
+			<select name="pais" id="pais" multiple size="6" : required>
 				<optgroup label="País">
 				    <option>Canadá</option>
 				    <option>Estados Unidos</option>
@@ -92,24 +92,24 @@
 
 			<p>Domicilio:</p>
 
-			<label for="usuario">CALLE:&nbsp;&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Calle" title="Nombre del usuario">
+			<label for="calle">CALLE:&nbsp;&nbsp;</label>
+			<input type="text" name="calle" id="calle" maxlength="25" placeholder="Calle" title="Nombre del usuario">
 
-			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NÚMERO DE CASA:&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Número de casa" title="Nombre del usuario">
+			<label for="numerocasa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NÚMERO DE CASA:&nbsp;</label>
+			<input type="number" name="numerocasa" id="numerocasa" maxlength="25" placeholder="Número de casa" title="Nombre del usuario">
 
-			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLONIA:&nbsp;</label>
-			<input type="text" name="usuario" maxlength="25" placeholder="Colonia" title="Nombre del usuario">
+			<label for="colonia">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLONIA:&nbsp;</label>
+			<input type="text" name="colonia" id="colonia" maxlength="25" placeholder="Colonia" title="Nombre del usuario">
 
-			<label for="usuario">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÓDIGO POSTAL:&nbsp;</label>
-			<input type="text" name="usuario" maxlength="7" placeholder="C.P." title="Nombre del usuario">
+			<label for="codigopostal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÓDIGO POSTAL:&nbsp;</label>
+			<input type="number" name="codigopostal" id="codigopostal" maxlength="7" placeholder="C.P." title="Nombre del usuario">
 			<br><br>
 			
 			<label for="correo">E-mail:</label>
 			<input type="email" name="correo" id="correo" placeholder="Correo electrónico" required>
 
-			<label for="pass">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:</label>
-			<input type="password" name="pass" id="pass" maxlength="8" size="15" placeholder="Contraseña" title="Contraseña" required>
+			<label for="rfc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R.F.C.:</label>
+			<input type="text" name="rfc" id="rfc" placeholder="R.F.C." required>
 			<br><br>
 
 			<label for="califica">¿Cómo evaluas el sitio web?</label> <br>
