@@ -1,0 +1,40 @@
+body{
+	background-color: #CEFF9A;
+}
+
+h1{
+	font-size: 4vw;
+	color: #000CFF;
+}
+
+.bebas-neue{
+	font-family: "Bebas Neue", sans-serif;
+  			font-weight: 400;
+  			font-style: normal;
+}
+
+h2{
+	font-size: 2vw;
+}
+
+.arvo-bold-italic {
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+label{
+	font-size: 1.5vw;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
