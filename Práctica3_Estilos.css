@@ -1,0 +1,45 @@
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#p3{
+	background-color: lightseagreen;
+	border: 5px solid lightseagreen;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	text-align: center;
+	font-size: 40px;
+	width: 97%; /*Ancho*/
+	height: 100px; /*Largo*/
+	align-content: center;
+}
+
+#p3:hover{ /*Al pasar el mouse*/
+	background-color: yellow;
+	border: 5px solid yellow;
+	text-align: center;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	transform: skew(-20deg); /*rotar*/
+	-moz-transform: skew(-20deg);
+	-webkit-transform: skew(-20deg);
+}
+
+#p3:active{ /*Al hacer clic sobre el*/
+	background-color: #23FF00;
+	border: 5px solid #23FF00;
+	text-align: center;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	transform: skew(-25deg); /*rotar*/
+	-moz-transform: skew(-25deg);
+	-webkit-transform: skew(-25deg);
+	box-shadow: #B0602D 20px 30px inset; /*sombra*/
+	-moz-box-shadow: #B0602D 20px 30px;
+	-webkit-box-shadow: #B0602D 20px 30px;
+}
