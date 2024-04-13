@@ -1,0 +1,29 @@
+*{
+	margin-top: 0;
+}
+
+#t1{
+	font-family: arial;
+	font-size: 30px;
+}
+
+#t4{
+	font-family: times new roman;
+	font-size: 20px;
+}
+
+#boton{
+	background-color: #00D4FF;
+	width: 400px; 
+	height: 40px;
+	margin: 20px;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#h2{
+	font-size: 20px;
+	text-align: left;
+	padding: 20px;
+	font-style: italic;
+}
