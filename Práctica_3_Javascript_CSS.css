@@ -1,0 +1,37 @@
+h2{
+	font-family: georgia;
+	font-size: 30px;
+	color: black;
+}
+
+#t2{
+	font-family: cambria;
+	font-style: bold;
+	font-size: 30px;
+	color: black;
+}
+
+#t3{
+	font-family: arial;
+	font-style: italic;
+	font-size: 25px;
+	color: blue;
+}
+
+label{
+	font-family: arial;
+	font-size: 17px;
+	color: black;
+}
+
+input{
+	height: 20px;
+	width: 16%;
+}
+
+#boton{
+	font-style: italic;
+	height: 30px;
+	width: 17%;
+	background-color: #00D1FF;
+}
