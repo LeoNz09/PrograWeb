@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+</head>
+<script>
+	var total;
+function califica(){
+	total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++){
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++){
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==100)
+        	document.getElementById("comentario").innerHTML="¡¡¡EXCELENTE!!! Se ve que conoces sobre cultura general. Eres muy bueno resolviendo cuestionarios";
+        else
+        	if(total==90 || total==80)
+        	document.getElementById("comentario").innerHTML="¡MUY BIEN!";
+        else
+        	if(total==70 || total==60)
+        	document.getElementById("comentario").innerHTML="REGULAR. Puedes mejorar";
+        else
+        	if(total<=50 || total>=10)
+        	document.getElementById("comentario").innerHTML="MAL, ESTUDIA UN POCO MÁS. Suerte para la próxima";
+        else
+        	document.getElementById("comentario").innerHTML="RESPUESTAS INCORRECTAS. Lamentablemente todas tus respuestas son incorrectas.";
+    }
+
+ 
+function generarPDF(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(30);
+//Color del texto
+doc.setTextColor(0,0,0);
+
+/*var comentario = document.getElementById("comentario").innerHTML;
+    doc.text(20, 20, "Resultados del test:");
+    doc.text(20, 30, comentario);*/
+
+doc.text(50, 35, "Resultados del test:"); //Ubicación, Texto
+if (total == 100)
+        doc.text(20, 30, "100 puntos. Excelente. Todas tus respuestas son correctas");
+    else if (total==90 || total==80)
+        doc.text(20, 30, "80-90 puntos. Muy bien. Obtuviste 9-10 preguntas correctas");
+    else if (total==70 || total==60)
+        doc.text(20, 30, "60-70 puntos. Regular. Obtuviste 6-8 preguntas correctas");
+    else if (total<=50 || total>=10)
+        doc.text(20, 30, "10-50 puntos. Mal. Obtuviste 1-5 preguntas correctas");
+    else
+        doc.text(20, 30, "0 puntos. Muy mal. Todas tus respuestas son incorrectas");
+
+//Guardar el PDF
+doc.save('resultados_cuestionario.pdf');
+
+console.log("Función generar() llamada correctamente.");
+}
+
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta</h1>
+	<h2>Tu opinión es importante</h2>
+
+	<h2>Cuestionario de Cultura General</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>1. ¿Quién pintó la famosa obra "La Mona Lisa"</li>
+		<input type="radio" name="r1" id="r1" value="0"/>a) Vincent Van Gogh<br/>
+		<input type="radio" name="r1" id="r1" value="10"/>b) Leonardo da Vinci<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>c) Pablo Picasso<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>d) Michelangelo Buonarroti<br/>
+		<br>
+		
+		<li>2. ¿Cuál es la capital de Francia?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>a) Berlín<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>b) Londres<br/>
+		<input type="radio" name="r2" id="r2" value="10"/>c) París<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>d) Roma<br/>
+		<br>
+
+		<li>3. Este evento histórico ocurrió el 20 de julio de 1969:</li>
+		<input type="radio" name="r3" id="r3" value="0"/>a) Caída del Muro de Berlín<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>b) Fin de la Segunda Guerra Mundial<br/>
+		<input type="radio" name="r3" id="r3" value="10"/>c) Primera llegada del hombre a la Luna<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>d) Independencia de India<br/>
+		<br>
+
+        <li>4. ¿Cuál es el símbolo químico del oro?</li>
+		<input type="radio" name="r4" id="r4" value="10"/>a) Au<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>b) Ag<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>c) Fe<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>d) Pb<br/>
+		<br>
+
+		<li>5. ¿Cuál es el deporte más popular en Brasil?</li>
+		<input type="radio" name="r5" id="r5" value="10"/>a) Fútbol<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>b) Tenis<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>c) Voleibol<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>d) Baloncesto<br/>
+		<br>
+
+		<li>6. ¿Quién es conocido como el "Rey del Pop"?</li>
+		<input type="radio" name="r6" id="r6" value="10"/>a) Michael Jackson<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>b) Elvis Presley<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>c) Madonna<br/>
+		<input type="radio" name="r6" id="r6" value="0"/>d) Beyoncé<br/>
+		<br>
+
+		<li>7. ¿Qué película ganó el premio Óscar a la Mejor Película en 1997?</li>
+		<input type="radio" name="r7" id="r7" value="0"/>a) "Forrest Gump"<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>b) "Pulp Fiction"<br/>
+		<input type="radio" name="r7" id="r7" value="10"/>c) "Titanic"<br/>
+		<input type="radio" name="r7" id="r7" value="0"/>d) "El Padrino III"<br/>
+		<br>
+
+		<li>8. ¿Cuál es el océano más grande del mundo?</li>
+		<input type="radio" name="r8" id="r8" value="0"/>a) Océano Atlántico<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>b) Océano Índico<br/>
+		<input type="radio" name="r8" id="r8" value="10"/>c) Océano Pacífico<br/>
+		<input type="radio" name="r8" id="r8" value="0"/>d) Océano Ártico<br/>
+		<br>
+
+		<li>9. Estas siglas representan al estándar de comunicación inalámbrica y conexión a Internet utilizado para conectar dispositivos electrónicos a corta distancia: </li>
+		<input type="radio" name="r9" id="r9" value="0"/>a) USB<br/>
+		<input type="radio" name="r9" id="r9" value="10"/>b) WiFi<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>c) HDMI<br/>
+		<input type="radio" name="r9" id="r9" value="0"/>d) LTE<br/>
+		<br>
+
+		<li>10. ¿Quién es el creador de la serie de televisión "Los Simpsons"?</li>
+		<input type="radio" name="r10" id="r10" value="0"/>a) Seth MacFarlane<br/>
+		<input type="radio" name="r10" id="r10" value="10"/>b) Matt Groening<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>c) Trey Parker<br/>
+		<input type="radio" name="r10" id="r10" value="0"/>d) Seth Green<br/>
+		<br>
+
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generarPDF()" value="Ver resultados"/> <br/>
+<iframe id="pdfViewer" frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

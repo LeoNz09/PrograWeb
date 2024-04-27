@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cuestionario Proyecto</title>
+</head>
+<body>
+
+	<div id="contiene">
+		<h1>Responde la encuesta</h1>
+		<h2>Tu opinión es importante</h2>
+		<div>
+			<form>
+				<ul>
+
+					<li>1. ¿Qué es la Green Tech?</li>
+					<input type="radio" name="r1" id="r1" value="5"/>Fuentes de energía renovable<br/>
+					<input type="radio" name="r1" id="r1" value="0"/>Avances tecnológicos amigables con el medio ambiente<br/>
+					<input type="radio" name="r1" id="r1" value="0"/>Contaminación del medio ambiente<br/>
+					<input type="radio" name="r1" id="r1" value="0"/>Cuidado del medio ambiente<br/>
+					<br>
+		
+					<li>2. ¿De donde se origina la Green Tech?</li>
+					<input type="radio" name="r2" id="r2" value="5"/>Proyectos ambientales escolares o de empresas<br/>
+					<input type="radio" name="r2" id="r2" value="0"/>Empresas especializadas en el medio ambiente<br/>
+					<input type="radio" name="r2" id="r2" value="0"/>Iniciativa de Advantage Austria<br/>
+					<input type="radio" name="r2" id="r2" value="0"/>Iniciativa por parte de gobiernos<br/>
+					<br>
+
+					<li>3. Son objetivos de la Green Tech</li>
+					<input type="radio" name="r3" id="r3" value="5"/>Crear fuentes de energía renovable y reeemplazar aquello que daña el medio ambiente<br/>
+					<input type="radio" name="r3" id="r3" value="0"/>Promover el uso de autos eléctricos<br/>
+					<input type="radio" name="r3" id="r3" value="0"/>Promover el uso de energías renovables y la contaminación del medio ambiente<br/>
+					<input type="radio" name="r3" id="r3" value="0"/>Energía eolica y paneles solares<br/>
+					<br>
+
+        			<li>4. ¿Cuál es el principal antecedente de la Green Tech?</li>
+					<input type="radio" name="r4" id="r4" value="5"/>Conciencia sobre el daño del medio ambiente<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Creación de energía limpia<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Elaboración de energía limpia<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Preocupación por el cambio climático y degradación ambiental<br/>
+					<br>
+
+					<li>4. Las nuevas tecnologías como la 5G, la nube, Inteligencia Artificial, TICS, etc, han ayudado a qe </li>
+					<input type="radio" name="r4" id="r4" value="5"/>Conciencia sobre el daño del medio ambiente<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Creación de energía limpia<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Elaboración de energía limpia<br/>
+					<input type="radio" name="r4" id="r4" value="0"/>Preocupación por el cambio climático y degradación ambiental<br/>
+					<br>
+				</ul>
+			</form>
+		</div>
+		<input type="button" value="Calificar" onclick="califica()">
+		<p></p>
+		<p id="total">   </p>
+		<p id="comentario">   </p>
+		<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+		<iframe frameborder="0" width="600" height="500"></iframe>
+	</div>
+
+</body>
+</html>
