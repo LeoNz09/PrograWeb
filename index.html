@@ -5,6 +5,8 @@
 	<meta charset="utf-8"/>
 	<meta name="autor" content="UPSLP">
 	<link rel="icon" type="image/png" href="Imágenes/logo UPSLP.png">
+	<link rel="stylesheet" type="text/css" href="APIStorageInicio.css">
+	<script src="APIStorageInicio.js"></script>
 
 	<script type="text/javascript">(function (w, d) {w.amo_pixel_token = 'p1Ip4iB8yqaEyXU9HPmcTNUHihw4nFym28yeLF9ajAqMVw2/M3Gomcun3ZjKITi9O5pVBHltNG9XPc50a4+IZg==';var s = document.createElement('script'), f = d.getElementsByTagName('script')[0];s.id = 'amo_pixel_js';s.type = 'text/javascript';s.async = true;s.src = 'https://piper.amocrm.com/pixel/js/tracker/pixel.js?token=' + w.amo_pixel_token;f.parentNode.insertBefore(s, f);})(window, document);</script>
 	
@@ -125,6 +127,9 @@
 			<a href="EvaluarCuestionarioYPDF.html" alt="Formulario y PDF">
 				<li>Práctica 4. Javascript - Formulario y PDF</li>
 			</a>
+			<a href="Práctica5_APIStorage.html" alt="API Storage">
+				<li>Práctica 5. API Storage</li>
+			</a>
 		</ol>
 		<li>Proyecto Final</li>
 		<ol type="square" start="1">
@@ -133,6 +138,21 @@
 			</a>
 		</ol>
 	</ul>
+
+	<section id="cajaformulario">
+		<form id="formulario">
+			<p>Usuario:<br><input type="text" name="clave" id="clave"></p>
+			<p>Comentario:<br><textarea name="text" id="texto"></textarea></p>
+			<p><input type="button" name="grabar" id="grabar" value="Publicar"></p>
+			<p><input type="button" name="eliminar" id="eliminar" value="Borrar" onclick="elimina()"></p>
+		</form>
+	</section>
+	
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMENTARIOS:</p>
+	<section id="cajadatos">
+		<p>Aún no registras información</p>
+	</section>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 	<footer>
 		<h4 align="center">Universidad Politécnica de San Luis Potosí, Derechos reservados, &copy; 2024.</h4>
