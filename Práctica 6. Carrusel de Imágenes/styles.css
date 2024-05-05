@@ -1,0 +1,46 @@
+/*Establece al contendor principal una posición relativa, un ancho máximo y un margen automático*/
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*Establece al contenedor de las imágenes del carrusel como un contenido flexible*/
+.carousel-content {
+  display: flex;
+}
+
+/*Aplica un ancho de 100% a las imágenes que se encuentran dentro del contenedor del carrusel y se ocultan inicialmente*/
+.carousel-content img {
+  width: 100%;
+  display: none;
+}
+
+/*Aplica un estilo para la imagen activa que se está mostrando*/
+.carousel-content img.active {
+  display: block;
+}
+
+/*Aplica estilos para los botones de navegación como la posición absoluta, color, borde, espaciado y cursor*/
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*Establece posición izquierda al botón de retroceder imagen*/
+#prevBtn {
+  left: 0;
+}
+
+/*Establece posición derecha al botón de avanzar imagen*/
+#nextBtn {
+  right: 0;
+}
+
