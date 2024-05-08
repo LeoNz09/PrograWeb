@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario Comentarios</title>
+</head>
+<body>
+
+	<h1>COMENTARIOS</h1>
+	<br/><br/>
+
+	<div>
+		<form action="FormularioComentariosPHP.php" method="post">
+			<label for="nombre">Nombre de usuario:</label>
+			<input type="text" id="nombre" name="nombre" placeholder="User">
+			<br/><br/><br/>
+
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" placeholder="Email">
+			<br/><br/><br/>
+
+			<label for="mensaje">Comentario:</label>
+			<textarea id="mensaje" name="mensaje"></textarea>
+			<br/><br/><br/>
+			<input type="submit" id="submit" name="submit" value="Enviar formulario">
+		</form>
+	</div>
+
+</body>
+</html>
