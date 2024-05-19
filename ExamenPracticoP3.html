@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Palindromo</title>
+	<link rel="stylesheet" type="text/css" href="ExamenPracticoP3EstilosCSS.css">
+
+	<script type="text/javascript">
+		function palindromo() {
+			var cadena = document.getElementById("cadena").value;
+			var cadenaOriginal = cadena.toLowerCase();
+			var letrasEspacios = cadenaOriginal.split("");
+			var cadenaSinEspacios = "";
+
+			for(var i in letrasEspacios) {
+				if(letrasEspacios[i] != " ") {
+					cadenaSinEspacios += letrasEspacios[i];
+				}
+			}
+
+			var letras = cadenaSinEspacios.split("");
+			var letrasReves = cadenaSinEspacios.split("").reverse();
+			var iguales = true;
+
+			for(var i in letras) {
+				if(letras[i] != letrasReves[i]) {
+					iguales = false;
+					break;
+				}
+			}
+			if(iguales) {
+				document.getElementById("resultado").innerHTML="La palabra " +cadena+ " Es un Palíndromo";
+			}
+			else {
+				document.getElementById("resultado").innerHTML="La palabra " +cadena+ " No es un palíndromo";
+			}
+		}	
+	</script>
+</head>
+<body>
+
+	<h1>Examen Práctico Parcial 3</h1>
+
+	<h3>Palabra Palíndroma</h3>
+
+	<form onsubmit="event.preventDefault(); palindromo();">
+		<p>Para continuar por favor escribe una palabra que quieras comprobar si es palíndroma</p>
+
+		<label for="cadena">Escribe la palabra:</label> <br><br>
+		<input type="text" name="cadena" id="cadena" placeholder="Escribe la palabra" required> <br><br>
+		<button id="boton" onclick="palindromo()">Comprobar palabra</button> <br><br>
+		<p id="resultado"> </p>
+	</form>
+
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+	<footer>
+		<h4>Alumno: </h4><cite>Núñez de Jesús Leonardo, 183782</cite><br/>
+		<h4>Profesora: </h4><cite>MC Imelda Deyanira Hernández Martínez</cite>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+h1{
+	font-family: arial;
+	font-size: 35px;
+	color: blue;
+}
+
+h3{
+	font-family: cambria;
+	font-style: italic;
+	font-size: 25px;
+	color: #00550F;
+}
+
+form{
+	font-family: arial narrow;
+	font-size: 20px;
+	background-color: #00D1FF;
+}
+
+#boton{
+	background-color: #FFF700;
+	border: groove 12px;
+	border-color: #08FF00;
+}
