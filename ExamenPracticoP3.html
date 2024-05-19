@@ -5,37 +5,8 @@
 	<title>Palindromo</title>
 	<link rel="stylesheet" type="text/css" href="ExamenPracticoP3EstilosCSS.css">
 
-	<script type="text/javascript">
-		function palindromo() {
-			var cadena = document.getElementById("cadena").value;
-			var cadenaOriginal = cadena.toLowerCase();
-			var letrasEspacios = cadenaOriginal.split("");
-			var cadenaSinEspacios = "";
+	<script src="ExamenPracticoP3JS.js"></script>
 
-			for(var i in letrasEspacios) {
-				if(letrasEspacios[i] != " ") {
-					cadenaSinEspacios += letrasEspacios[i];
-				}
-			}
-
-			var letras = cadenaSinEspacios.split("");
-			var letrasReves = cadenaSinEspacios.split("").reverse();
-			var iguales = true;
-
-			for(var i in letras) {
-				if(letras[i] != letrasReves[i]) {
-					iguales = false;
-					break;
-				}
-			}
-			if(iguales) {
-				document.getElementById("resultado").innerHTML="La palabra " +cadena+ " Es un Palíndromo";
-			}
-			else {
-				document.getElementById("resultado").innerHTML="La palabra " +cadena+ " No es un palíndromo";
-			}
-		}	
-	</script>
 </head>
 <body>
 
