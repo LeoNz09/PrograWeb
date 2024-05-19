@@ -1,10 +1,13 @@
+<!--Núñez de Jesús Leonardo-->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Palindromo</title>
-	<link rel="stylesheet" type="text/css" href="ExamenPracticoP3EstilosCSS.css">
+	<link rel="stylesheet" type="text/css" href="ExamenPracticoP3EstilosCSS.css"> <!--Se llama a un archivo CSS externo-->
 
+	<!--Se llama a un archivo js externo-->
 	<script src="ExamenPracticoP3JS.js"></script>
 
 </head>
@@ -14,17 +17,25 @@
 
 	<h3>Palabra Palíndroma</h3>
 
+	<!--Formulario en el cual se va a evaluar si una palabra es palindroma-->
+	<!--Se llama a una funcion en el archivo js externo-->
 	<form onsubmit="event.preventDefault(); palindromo();">
 		<p>Para continuar por favor escribe una palabra que quieras comprobar si es palíndroma</p>
 
+		<!--Se escribe la palabra a comprobar-->
 		<label for="cadena">Escribe la palabra:</label> <br><br>
 		<input type="text" name="cadena" id="cadena" placeholder="Escribe la palabra" required> <br><br>
+
+		<!--Boton para comprobar si la palabra es palíndroma-->
 		<button id="boton" onclick="palindromo()">Comprobar palabra</button> <br><br>
+
+		<!--Se muestra el resultado si la palabra ingresada es palíndroma o no-->
 		<p id="resultado"> </p>
 	</form>
 
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+	<!--Pie de página-->
 	<footer>
 		<h4>Alumno: </h4><cite>Núñez de Jesús Leonardo, 183782</cite><br/>
 		<h4>Profesora: </h4><cite>MC Imelda Deyanira Hernández Martínez</cite>

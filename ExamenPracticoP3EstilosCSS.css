@@ -1,9 +1,13 @@
+/*Núñez de Jesús Leonardo*/
+
+/*Estilos para h1 como el tipo de fuente, tamaño y color*/
 h1{
 	font-family: arial;
 	font-size: 35px;
 	color: blue;
 }
 
+/*Estilos para h3 como el tipo de fuente, estilo, tamaño y color*/
 h3{
 	font-family: cambria;
 	font-style: italic;
@@ -11,12 +15,14 @@ h3{
 	color: #00550F;
 }
 
+/*Estilos para el formulario como el tipo de fuente, tamaño y color de fondo*/
 form{
 	font-family: arial narrow;
 	font-size: 20px;
 	background-color: #00D1FF;
 }
 
+/*Estilos para el boton como el color de fondo, borde y color del borde*/
 #boton{
 	background-color: #FFF700;
 	border: groove 12px;
